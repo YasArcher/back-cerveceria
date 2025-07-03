@@ -1,0 +1,196 @@
+INSERT INTO cervezas_tipoingrediente (nombre_tipo) VALUES 
+('Maltas'),
+('Lúpulos'),
+('Levaduras');
+INSERT INTO cervezas_unidadmedida (nombre) VALUES ('kg');
+
+📘 DOCUMENTACIÓN DE ENDPOINTS – API de Cervecería
+
+────────────────────────────────────────────────────────────
+📌 GET /recetas/
+Descripción: Lista todas las recetas.
+Ejemplo de respuesta:
+[
+  {
+    "id": 1,
+    "nombre_receta": "IPA Clásica",
+    "descripcion": "Receta de India Pale Ale",
+    "fecha_creacion": "2025-07-02",
+    ...
+  }
+]
+
+────────────────────────────────────────────────────────────
+📌 POST /recetas/
+Descripción: Crea una receta.
+Body:
+{
+  "nombre_receta": "Porter Fuerte",
+  "descripcion": "Receta robusta con maltas oscuras"
+}
+Respuesta:
+{
+  "id": 2,
+  "nombre_receta": "Porter Fuerte",
+  "descripcion": "Receta robusta con maltas oscuras"
+}
+
+────────────────────────────────────────────────────────────
+📌 GET /ingredientes-avanzado/
+Descripción: Lista ingredientes con campo extra 'receta' (si se pasa al crear).
+Respuesta esperada:
+[
+  {
+    "id": 1,
+    "nombre_ingrediente": "Maltas Pilsen",
+    "tipo": 1,
+    "unidad": 1,
+    "stock": 50
+  }
+]
+
+────────────────────────────────────────────────────────────
+📌 POST /ingredientes-avanzado/
+Descripción: Crea un ingrediente y lo asigna a una receta.
+Body:
+{
+  "nombre_ingrediente": "Cara Ruby",
+  "tipo": 1,
+  "unidad": 1,
+  "stock": 25,
+  "receta": 2
+}
+
+────────────────────────────────────────────────────────────
+📌 POST /detalle-ingredientes/
+Descripción: Asigna un ingrediente a una receta (sin duplicados).
+Body:
+{
+  "receta": 2,
+  "ingrediente": 4
+}
+
+────────────────────────────────────────────────────────────
+📌 GET /ingredientes/
+Descripción: Lista básica de todos los ingredientes.
+
+────────────────────────────────────────────────────────────
+📌 GET /tipos-con-ingredientes/
+Descripción: Lista todos los tipos de ingrediente con sus ingredientes.
+Respuesta:
+[
+  {
+    "id": 1,
+    "nombre_tipo": "Maltas",
+    "ingredientes": [
+      {
+        "id": 1,
+        "nombre_ingrediente": "Pilsen",
+        "unidad": {
+          "id": 1,
+          "nombre": "kg"
+        },
+        "stock": 50
+      }
+    ]
+  }
+]
+
+────────────────────────────────────────────────────────────
+📌 GET /recetas-con-ingredientes/
+Descripción: Trae recetas con sus ingredientes organizados por tipo.
+Respuesta:
+[
+  {
+    "id": 1,
+    "nombre_receta": "IPA Clásica",
+    "descripcion": "...",
+    "fecha_creacion": "...",
+    "tipos_ingredientes": [
+      {
+        "id": 1,
+        "nombre_tipo": "Maltas",
+        "ingredientes": [
+          {
+            "id": 3,
+            "nombre_ingrediente": "Pale Ale",
+            "unidad": { "id": 1, "nombre": "kg" },
+            "stock": 45,
+            "cantidad": 2.5
+          }
+        ]
+      }
+    ]
+  }
+]
+
+────────────────────────────────────────────────────────────
+📌 POST /preparar-bebida/
+Descripción: Prepara una bebida y descuenta del stock los ingredientes según la receta y la cantidad producida.
+Body:
+{
+  "receta_id": 1,
+  "cantidad": 10
+}
+Respuesta exitosa:
+{
+  "message": "Bebida preparada correctamente.",
+  "ingredientes_actualizados": [
+    { "ingrediente_id": 3, "nuevo_stock": 42.5 },
+    { "ingrediente_id": 5, "nuevo_stock": 39.0 }
+  ]
+}
+Errores posibles:
+{
+  "error": "Stock insuficiente para el ingrediente: Cara Blond"
+}
+
+📦 INSTRUCCIONES PARA LEVANTAR EL PROYECTO CERVECERÍA
+
+. CLONAR EL PROYECTO
+---------------------
+git clone https://github.com/tu_usuario/back-cerveceria.git
+cd back-cerveceria
+
+. CREAR ENTORNO VIRTUAL E INSTALAR DEPENDENCIAS
+-------------------------------------------------
+python -m venv venv
+source venv/bin/activate     # En Linux/macOS
+venv\Scripts\activate        # En Windows
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+. CONFIGURAR VARIABLES DE ENTORNO
+----------------------------------
+Crea un archivo `.env` en la raíz con el siguiente contenido:
+
+DEBUG=0
+SECRET_KEY=tesisproject
+
+
+. Levantar los contenedores con Docker:
+   docker-compose up -d --build
+
+4. Aplicar las migraciones para crear las tablas en la base de datos:
+   docker-compose exec web python manage.py makemigrations
+   docker-compose exec web python manage.py migrate
+
+. Crear un superusuario para acceder al panel de administración:
+   docker-compose exec web python manage.py createsuperuser
+
+. Insertar los datos iniciales en la base de datos (tipos de ingredientes y unidad de medida):
+   Puedes ejecutar este bloque directamente en la base de datos PostgreSQL usando alguna herramienta como pgAdmin o psql:
+   
+   INSERT INTO cervezas_tipoingrediente (nombre_tipo) VALUES 
+   ('Maltas'),
+   ('Lúpulos'),
+   ('Levaduras');
+
+   INSERT INTO cervezas_unidadmedida (nombre) VALUES ('kg');
+
+. Consumir la API desde el navegador o herramientas como Postman:
+   - GET /recetas/
+   - POST /ingredientes-avanzado/
+   - GET /tipos-con-ingredientes/
+   - POST /preparar-bebida/  (con campos "receta": <id> y "cantidad": <valor>)

@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: gunicorn miapp.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    depends_on:
+      - db
+    expose:
+      - 8000
+
+  db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: miappdb
+      POSTGRES_USER: miusuario
+      POSTGRES_PASSWORD: mipassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:

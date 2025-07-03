@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+
+# Media and static files
+/media
+/staticfiles
+
+# Django migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# VSCode settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Docker
+*.pid
+*.seed
+*.bak
+.env
+.env.*
+
+# Local dev env
+*.DS_Store
+*.swp
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python virtualenv
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Postgres data (if mounted locally)
+postgres_data/
+
+# Optional: if you're using Vite or frontend code
+node_modules/
