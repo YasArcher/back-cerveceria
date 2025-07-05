@@ -25,7 +25,7 @@ class IngredienteSerializer(serializers.ModelSerializer):
 # ─────────────────────────────────────────────────────────────────────
 
 class IngredienteConRecetaSerializer(serializers.ModelSerializer):
-    receta = serializers.IntegerField(required=False, write_only=True)  # Campo adicional para vincular al crear
+    receta = serializers.IntegerField(required=False, write_only=True)
 
     class Meta:
         model = Ingrediente
@@ -48,8 +48,6 @@ class AsignarIngredienteSerializer(serializers.ModelSerializer):
     def validate(self, data):
         receta = data.get('receta')
         ingrediente = data.get('ingrediente')
-
-        # Verifica si ya existe esa relación
         if DetalleIngredientes.objects.filter(receta=receta, ingrediente=ingrediente).exists():
             raise serializers.ValidationError("Este ingrediente ya está asignado a la receta.")
         return data
@@ -60,10 +58,25 @@ class AsignarIngredienteSerializer(serializers.ModelSerializer):
 
 class IngredienteBasicoSerializer(serializers.ModelSerializer):
     unidad = UnidadSerializer()
-    
+    cantidad = serializers.SerializerMethodField()
+
     class Meta:
         model = Ingrediente
-        fields = ['id', 'nombre_ingrediente', 'unidad', 'stock']
+        fields = ['id', 'nombre_ingrediente', 'unidad', 'cantidad', 'stock']
+
+    def get_cantidad(self, ingrediente):
+        override = self.context.get('cantidad_override')
+        if override is not None:
+            return override
+
+        receta = self.context.get('receta')
+        if not receta:
+            return None
+        detalle = DetalleIngredientes.objects.filter(
+            receta=receta,
+            ingrediente=ingrediente
+        ).first()
+        return detalle.cantidad if detalle else None
 
 class TipoConIngredientesSerializer(serializers.ModelSerializer):
     ingredientes = serializers.SerializerMethodField()
@@ -91,22 +104,33 @@ class TipoIngredienteConIngredientesDeRecetaSerializer(serializers.ModelSerializ
         receta = self.context.get('receta')
         if not receta:
             return []
-        ingredientes = Ingrediente.objects.filter(
-            tipo=tipo,
-            detalleingredientes__receta=receta
+
+        detalles = DetalleIngredientes.objects.select_related('ingrediente').filter(
+            receta=receta,
+            ingrediente__tipo=tipo
         )
-        return IngredienteBasicoSerializer(ingredientes, many=True).data
+
+        ingredientes = []
+        for detalle in detalles:
+            serializer = IngredienteBasicoSerializer(
+                detalle.ingrediente,
+                context={'receta': receta, 'cantidad_override': detalle.cantidad}
+            )
+            ingredientes.append(serializer.data)
+        return ingredientes
 
 class RecetaConIngredientesSerializer(serializers.ModelSerializer):
     tipos = serializers.SerializerMethodField()
 
     class Meta:
         model = Receta
-        fields = ['id', 'nombre', 'descripcion', 'tipos']
+        fields = ['id', 'nombre_receta', 'descripcion', 'tipos']
 
     def get_tipos(self, receta):
         tipos = TipoIngrediente.objects.all()
-        return TipoIngredienteConIngredientesDeRecetaSerializer(tipos, many=True, context={'receta': receta}).data
+        return TipoIngredienteConIngredientesDeRecetaSerializer(
+            tipos, many=True, context={'receta': receta}
+        ).data
 
 
 # ─────────────────────────────────────────────────────────────────────

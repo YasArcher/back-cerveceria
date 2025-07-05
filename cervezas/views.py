@@ -30,6 +30,15 @@ class RecetaConIngredientesViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Receta.objects.all()
     serializer_class = RecetaConIngredientesSerializer
 
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        if self.action == 'retrieve':
+            context['receta'] = self.get_object()
+        elif self.action == 'list':
+            # Contexto para múltiples recetas: se usa uno por cada instancia al serializar
+            context['include_cantidad'] = True
+        return context
+
 class PrepararBebidaView(APIView):
     def post(self, request):
         serializer = PrepararBebidaSerializer(data=request.data)
@@ -54,7 +63,7 @@ class PrepararBebidaView(APIView):
                 for detalle in detalles:
                     requerido = detalle.cantidad * cantidad_preparar
                     ingrediente = detalle.ingrediente
-                    ingrediente.stock -= requerido
+                    ingrediente.stock -= float(requerido)
                     ingrediente.save()
 
                 return Response({"mensaje": "Bebida preparada exitosamente."})
