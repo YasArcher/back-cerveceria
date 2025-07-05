@@ -8,7 +8,7 @@ router.register(r'ingredientes-avanzado', IngredienteExtendidoViewSet, basename=
 router.register(r'detalle-ingredientes', AsignarIngredienteViewSet)
 router.register(r'ingredientes', IngredienteViewSet)
 router.register(r'tipos-con-ingredientes', TipoConIngredientesViewSet)
-router.register(r'recetas-con-ingredientes', RecetaConIngredientesViewSet)
+router.register(r'recetas-con-ingredientes', RecetaConIngredientesViewSet, basename='recetas-con-ingredientes')
 
 urlpatterns = [
     path('', include(router.urls)),
