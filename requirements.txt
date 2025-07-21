@@ -3,4 +3,5 @@ gunicorn
 psycopg2-binary
 Pillow
 djangorestframework
-django-cors-headers 
+django-cors-headers
+dj-database-url
