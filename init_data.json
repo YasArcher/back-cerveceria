@@ -1,0 +1,417 @@
+[
+  {
+    "model": "cervezas.tipoingrediente",
+    "pk": 1,
+    "fields": {
+      "nombre_tipo": "Maltas"
+    }
+  },
+  {
+    "model": "cervezas.tipoingrediente",
+    "pk": 2,
+    "fields": {
+      "nombre_tipo": "Lúpulos"
+    }
+  },
+  {
+    "model": "cervezas.tipoingrediente",
+    "pk": 3,
+    "fields": {
+      "nombre_tipo": "Levaduras"
+    }
+  },
+  {
+    "model": "cervezas.unidadmedida",
+    "pk": 1,
+    "fields": {
+      "nombre": "kg"
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 1,
+    "fields": {
+      "nombre_ingrediente": "Pilsen",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 2,
+    "fields": {
+      "nombre_ingrediente": "Munich",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 3,
+    "fields": {
+      "nombre_ingrediente": "Abbey",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 4,
+    "fields": {
+      "nombre_ingrediente": "Cara Ruby",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 5,
+    "fields": {
+      "nombre_ingrediente": "Cara Blond",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 6,
+    "fields": {
+      "nombre_ingrediente": "Cara Clair",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 7,
+    "fields": {
+      "nombre_ingrediente": "Wheat Blanc",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 8,
+    "fields": {
+      "nombre_ingrediente": "Cebada Tostada",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 9,
+    "fields": {
+      "nombre_ingrediente": "Peated",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 10,
+    "fields": {
+      "nombre_ingrediente": "Pale Ale",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 11,
+    "fields": {
+      "nombre_ingrediente": "Cara Gold",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 12,
+    "fields": {
+      "nombre_ingrediente": "Chocolate",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 13,
+    "fields": {
+      "nombre_ingrediente": "Melano",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 14,
+    "fields": {
+      "nombre_ingrediente": "Black",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 15,
+    "fields": {
+      "nombre_ingrediente": "Special Belgium",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 16,
+    "fields": {
+      "nombre_ingrediente": "Crystal",
+      "tipo": 1,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 17,
+    "fields": {
+      "nombre_ingrediente": "Saaz",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 18,
+    "fields": {
+      "nombre_ingrediente": "Hallertau Mittelfruh",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 19,
+    "fields": {
+      "nombre_ingrediente": "Perle",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 20,
+    "fields": {
+      "nombre_ingrediente": "Polaris",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 21,
+    "fields": {
+      "nombre_ingrediente": "Cascada",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 22,
+    "fields": {
+      "nombre_ingrediente": "Mosaico",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 23,
+    "fields": {
+      "nombre_ingrediente": "Golding",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 24,
+    "fields": {
+      "nombre_ingrediente": "Fuggle",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 25,
+    "fields": {
+      "nombre_ingrediente": "Magnum",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 26,
+    "fields": {
+      "nombre_ingrediente": "Tettnang",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 27,
+    "fields": {
+      "nombre_ingrediente": "Nugget",
+      "tipo": 2,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 28,
+    "fields": {
+      "nombre_ingrediente": "Safale S-33",
+      "tipo": 3,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 29,
+    "fields": {
+      "nombre_ingrediente": "Safale BE-256",
+      "tipo": 3,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 30,
+    "fields": {
+      "nombre_ingrediente": "Safale S-04",
+      "tipo": 3,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.ingrediente",
+    "pk": 31,
+    "fields": {
+      "nombre_ingrediente": "Safale T58",
+      "tipo": 3,
+      "unidad": 1,
+      "stock": 0
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 1,
+    "fields": {
+      "nombre_receta": "Abadía Ámbar",
+      "descripcion": "Notas de caramelo y dulces, fusión de malta Munich y Abbey. Leve amargo y característico dulzor.",
+      "porcentaje_alcohol": 7.0,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 2,
+    "fields": {
+      "nombre_receta": "Triple Blond",
+      "descripcion": "Rubia de alta graduación, aroma a malta, sutil sabor dulce, final amargo seco y placentero.",
+      "porcentaje_alcohol": 9.0,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 3,
+    "fields": {
+      "nombre_receta": "Cerveza Scotch",
+      "descripcion": "Estilo irlandés con semillas de roble, aromas a caramelo y granos tostados.",
+      "porcentaje_alcohol": 6.5,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 4,
+    "fields": {
+      "nombre_receta": "Belga Ahumada",
+      "descripcion": "Color marrón, aroma a pan y caramelo, sabor amaderado, excepcional.",
+      "porcentaje_alcohol": 6.0,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 5,
+    "fields": {
+      "nombre_receta": "Doppel Bock",
+      "descripcion": "Alta maltosidad, sabores acaramelados y tostados, cuerpo pleno, clásico alemán.",
+      "porcentaje_alcohol": 10.2,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 6,
+    "fields": {
+      "nombre_receta": "Stout Belga",
+      "descripcion": "Notas tostadas, retrogusto de chocolate y café, frutas oscuras y levaduras belgas.",
+      "porcentaje_alcohol": 6.5,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  },
+  {
+    "model": "cervezas.receta",
+    "pk": 7,
+    "fields": {
+      "nombre_receta": "Porter",
+      "descripcion": "Sabor a vainilla, malta tostada, chocolate, caramelo y tofe, con carácter floral.",
+      "porcentaje_alcohol": 7.0,
+      "contenido_neto": 350,
+      "imagen": null
+    }
+  }
+]
