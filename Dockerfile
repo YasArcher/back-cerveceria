@@ -27,5 +27,9 @@ RUN python manage.py collectstatic --noinput || true
 # Expón el puerto usado por Gunicorn
 EXPOSE 8000
 
+# Configura la base de datos (si es necesario)
+RUN python manage.py migrate
+
+
 # Ejecuta Gunicorn como servidor WSGI
 CMD ["gunicorn", "miapp.wsgi:application", "--bind", "0.0.0.0:8000"]
