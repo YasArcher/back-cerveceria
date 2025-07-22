@@ -413,5 +413,500 @@
       "contenido_neto": 350,
       "imagen": null
     }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 1,
+    "fields": {
+      "cantidad": 67.50,
+      "ingrediente": 1,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 2,
+    "fields": {
+      "cantidad": 33.50,
+      "ingrediente": 2,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 3,
+    "fields": {
+      "cantidad": 6.50,
+      "ingrediente": 3,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 4,
+    "fields": {
+      "cantidad": 4.50,
+      "ingrediente": 4,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 5,
+    "fields": {
+      "cantidad": 0.90,
+      "ingrediente": 17,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 6,
+    "fields": {
+      "cantidad": 0.70,
+      "ingrediente": 18,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 7,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 28,
+      "receta": 1
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 8,
+    "fields": {
+      "cantidad": 120.00,
+      "ingrediente": 1,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 9,
+    "fields": {
+      "cantidad": 15.00,
+      "ingrediente": 5,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 10,
+    "fields": {
+      "cantidad": 7.50,
+      "ingrediente": 6,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 11,
+    "fields": {
+      "cantidad": 7.50,
+      "ingrediente": 7,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 12,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 19,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 13,
+    "fields": {
+      "cantidad": 0.18,
+      "ingrediente": 20,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 14,
+    "fields": {
+      "cantidad": 0.50,
+      "ingrediente": 21,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 15,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 22,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 16,
+    "fields": {
+      "cantidad": 0.35,
+      "ingrediente": 29,
+      "receta": 2
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 17,
+    "fields": {
+      "cantidad": 59.50,
+      "ingrediente": 1,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 18,
+    "fields": {
+      "cantidad": 1.50,
+      "ingrediente": 8,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 19,
+    "fields": {
+      "cantidad": 5.00,
+      "ingrediente": 14,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 20,
+    "fields": {
+      "cantidad": 4.00,
+      "ingrediente": 9,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 21,
+    "fields": {
+      "cantidad": 8.00,
+      "ingrediente": 4,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 22,
+    "fields": {
+      "cantidad": 0.50,
+      "ingrediente": 23,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 23,
+    "fields": {
+      "cantidad": 0.50,
+      "ingrediente": 24,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 24,
+    "fields": {
+      "cantidad": 0.35,
+      "ingrediente": 28,
+      "receta": 3
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 25,
+    "fields": {
+      "cantidad": 48.50,
+      "ingrediente": 1,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 26,
+    "fields": {
+      "cantidad": 15.00,
+      "ingrediente": 8,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 27,
+    "fields": {
+      "cantidad": 10.00,
+      "ingrediente": 2,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 28,
+    "fields": {
+      "cantidad": 20.50,
+      "ingrediente": 10,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 29,
+    "fields": {
+      "cantidad": 2.00,
+      "ingrediente": 12,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 30,
+    "fields": {
+      "cantidad": 5.00,
+      "ingrediente": 9,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 31,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 25,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 32,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 26,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 33,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 29,
+      "receta": 4
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 34,
+    "fields": {
+      "cantidad": 88.50,
+      "ingrediente": 1,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 35,
+    "fields": {
+      "cantidad": 44.00,
+      "ingrediente": 13,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 36,
+    "fields": {
+      "cantidad": 17.50,
+      "ingrediente": 4,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 37,
+    "fields": {
+      "cantidad": 26.50,
+      "ingrediente": 3,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 38,
+    "fields": {
+      "cantidad": 0.65,
+      "ingrediente": 27,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 39,
+    "fields": {
+      "cantidad": 0.85,
+      "ingrediente": 26,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 40,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 30,
+      "receta": 5
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 41,
+    "fields": {
+      "cantidad": 91.50,
+      "ingrediente": 1,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 42,
+    "fields": {
+      "cantidad": 7.00,
+      "ingrediente": 11,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 43,
+    "fields": {
+      "cantidad": 12.00,
+      "ingrediente": 12,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 44,
+    "fields": {
+      "cantidad": 2.50,
+      "ingrediente": 14,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 45,
+    "fields": {
+      "cantidad": 1.50,
+      "ingrediente": 15,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 46,
+    "fields": {
+      "cantidad": 2.25,
+      "ingrediente": 17,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 47,
+    "fields": {
+      "cantidad": 0.35,
+      "ingrediente": 28,
+      "receta": 6
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 48,
+    "fields": {
+      "cantidad": 56.50,
+      "ingrediente": 1,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 49,
+    "fields": {
+      "cantidad": 34.00,
+      "ingrediente": 2,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 50,
+    "fields": {
+      "cantidad": 16.00,
+      "ingrediente": 4,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 51,
+    "fields": {
+      "cantidad": 3.50,
+      "ingrediente": 16,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 52,
+    "fields": {
+      "cantidad": 3.50,
+      "ingrediente": 12,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 53,
+    "fields": {
+      "cantidad": 0.35,
+      "ingrediente": 25,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 54,
+    "fields": {
+      "cantidad": 0.30,
+      "ingrediente": 19,
+      "receta": 7
+    }
+  },
+  {
+    "model": "cervezas.detalleingredientes",
+    "pk": 55,
+    "fields": {
+      "cantidad": 0.40,
+      "ingrediente": 31,
+      "receta": 7
+    }
   }
 ]
