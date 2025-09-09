@@ -27,6 +27,34 @@
       "nombre": "kg"
     }
   },
+    {
+    "model": "cervezas.unidadmedida",
+    "pk": 2,
+    "fields": {
+      "nombre": "g"
+    }
+  },
+    {
+    "model": "cervezas.unidadmedida",
+    "pk": 3,
+    "fields": {
+      "nombre": "L"
+    }
+  },
+    {
+    "model": "cervezas.unidadmedida",
+    "pk": 4,
+    "fields": {
+      "nombre": "ml"
+    }
+  },
+      {
+    "model": "cervezas.unidadmedida",
+    "pk": 5,
+    "fields": {
+      "nombre": "u"
+    }
+  },
   {
     "model": "cervezas.ingrediente",
     "pk": 1,

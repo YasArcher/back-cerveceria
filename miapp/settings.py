@@ -85,7 +85,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL'),
         conn_max_age=600,
-        ssl_require=True  # asegura conexión segura con Railway
+        ssl_require=False  # asegura conexión segura con Railway
     )
 }
 
